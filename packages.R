@@ -16,18 +16,19 @@ install.packages(c(
 # Machine learning tools
 install.packages(c(
         "e1071", "caret", "rpart", "rpart.plot", "rattle", "randomForest", "randomForestSRC", "party", 
-        "C50", "quantregForest", "ROCR", "kknn"
+        "C50", "quantregForest", "ROCR", "kknn","KRLS" 
         ))
         
 # Data manipulation and graphs
 install.packages(c(
-        "ggthemes", "ggmcmc", "effects", "ngramr", "data.table", "gdata", "wesanderson", "DiagrammeR"
+        "ggthemes", "ggmcmc", "effects", "ngramr", "data.table", "gdata", "wesanderson", "DiagrammeR",
+        "cowplot"
         ))
 
 # Other useful tools
 install.packages(c(
         "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "ebal", "stargazer",
-        "rworldmap", "rfacebook", "coda", "lmtest", "parallel", "boot", "broom", "pander"
+        "rworldmap", "rfacebook", "coda", "lmtest", "parallel", "boot", "broom", "pander", "MTurkR"
         ))
 
 # Packages on Github

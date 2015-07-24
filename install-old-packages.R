@@ -6,3 +6,6 @@
 
 install.packages("/yourfolder/Zelig_3.5.4.tar.gz", repos = NULL, type="source")
 
+# You can also use Christopher Gandrud's InstallOldPackages():
+library(repmis)
+InstallOldPackages(pkgs = "Zelig", versions = "3.5.4")

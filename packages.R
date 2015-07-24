@@ -4,7 +4,7 @@
 install.packages(c(
         "Zelig", "mgcv", "gam", "MCMCpack", "arm", "lme4", "car", "MASS", "AER", "quantreg", "robust", 
         "heavy", "rms", "sandwich", "Synth", "rjags", "MCMCglmm", "survival", "sem", "pscl", "pcse",
-        "list", "endorse", "rr"
+        "list", "endorse", "rr", "rstan"
         ))
 
 # Hadleyverse
@@ -27,8 +27,8 @@ install.packages(c(
 
 # Other useful tools
 install.packages(c(
-        "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "ebal", "stargazer",
-        "rworldmap", "rfacebook", "coda", "lmtest", "parallel", "boot", "broom", "pander", "MTurkR"
+        "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "repmis", "stargazer",
+        "rworldmap", "rfacebook", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR"
         ))
 
 # Packages on Github
@@ -41,7 +41,3 @@ install_git("https://github.com/rasmusab/bayesian_first_aid")
 install_git("https://github.com/zmjones/edarf/")
 install_git("https://github.com/leeper/margins")
 install_git("https://github.com/rmcelreath/rethinking")
-
-# RStan
-source('http://mc-stan.org/rstan/install.R', echo = TRUE, max.deparse.length = 2000)
-install_rstan()

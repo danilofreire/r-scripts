@@ -15,9 +15,11 @@
 library(MatchIt) # matching package
 library(rgenoud) # genetic matching
 library(cem)     # coarsened exact matching
-library(Zelig)   # turnout data set, model estimation
-library(arm)     # simulations
+library(repmis)  # install old version of Zelig
 
+# Zelig
+InstallOldPackages(pkgs = "Zelig", versions = "3.5.5")
+library(Zelig)
 
 # Now we'll estimate the effect of race on voter turnout, trying to find pairs
 # that can be meaninfully compared. 
@@ -25,7 +27,7 @@ library(arm)     # simulations
 # First, we run the matchit() command on the treatment variable, including the
 # other pretreatment covariates that will also appear in the regression model.
 data(turnout)
-turnout <- data.frame(na.omit(turnout)) #remove NA's
+turnout <- data.frame(na.omit(turnout)) # remove NA's
 turnout$race1 <- ifelse(turnout$race == "white", 0, 1) # recode treatment as non-white
 
 # Using genetic matching
@@ -51,35 +53,24 @@ plot(match2, type = "jitter", interactive = FALSE)
 m.data <- match.data(match2)
 head(m.data)
 
-# To save only the treatment or control groups (for whatever reason),
+# To save only the treatment or control groups,
 # simply specify the option "group" as follows:
 m.data2 <- match.data(match2, group = "treat")
 head(m.data2)
 m.data3 <- match.data(match2, group = "control")
 head(m.data3)
 
-# Running the model and forcing the data.frame directly in the command
-model1 <- glm(vote ~ race1 + age + educate + income, data = m.data, family = binomial("logit"))
-summary(model1)
+# We can estimate the sample average treatment effect on the treated with Zelig 3.5.5.
+# First, run the model without the treatment variable and using the control data
+model1 <- zelig(vote ~ age + educate + income, data = match.data(match2, "control"), model = "logit")
 
-# Then we simulate the effects when race1 equals 0 and 1.
-sim0 <- data.frame(intercept = 1, race1 = 0, age = mean(turnout$age),
-                   educate = mean(turnout$educate), income = mean(turnout$income))
-sims <- arm::sim(model1, n = 1000)
+# Then simulate
+x1 <- setx(model1, data = match.data(match2, "treat"), cond = TRUE)
+s1 <- sim(model1, x = x1)
+summary(s1)
 
-y_sim0 <- rbinom(n = 1000, size = 1, prob = plogis(sims@coef %*% t(as.matrix(sim0))))
-mean(y_sim0)
-sd(y_sim0)
-quantile(y_sim0, c(.025, .975))
+# One can also use the following function to run cem:
+match3 <- cem("race1", turnout, drop = c("vote", "race"))
 
-sim1 <- data.frame(intercept = 1, race1 = 1, age = mean(turnout$age),
-                   educate = mean(turnout$educate), income = mean(turnout$income))
-sims <- arm::sim(model1, n = 1000)
-
-y_sim1 <- rbinom(n = 1000, size = 1, prob = plogis(sims@coef %*% t(as.matrix(sim1))))
-mean(y_sim1)
-sd(y_sim1)
-quantile(y_sim1, c(.025, .975))
-
-# Comparing both
-mean(y_sim1) - mean(y_sim0)
+# Estimate SATT:
+att(match3, vote ~ race1 + age + educate + income, turnout, "logit")

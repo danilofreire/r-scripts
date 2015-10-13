@@ -35,3 +35,8 @@ vcovCluster <- function(
         rcse.cov <- dfc * sandwich(model, meat = crossprod(uj)/N)
         return(rcse.cov)
 }
+
+# Now there's a package that calculates bootstrapped standard errors automatically.
+library(clusterSEs)
+cl <- cluster.bs.glm(model, dat = df, cluster = ~ country)
+summary(cl)

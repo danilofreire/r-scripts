@@ -4,7 +4,7 @@
 install.packages(c(
         "Zelig", "mgcv", "gam", "MCMCpack", "arm", "lme4", "car", "MASS", "AER", "quantreg", "robust", 
         "heavy", "rms", "sandwich", "Synth", "rjags", "MCMCglmm", "survival", "sem", "pscl", "pcse",
-        "list", "endorse", "rr", "rstan", "brms"
+        "rstan", "brms"
         ))
 
 # Hadleyverse
@@ -25,20 +25,26 @@ install.packages(c(
         "cowplot"
         ))
 
+# Analysis of Experiments        
+install.packages(c(
+        "experiment", "list", "endorse", "rr", "mediation", "FindIt"
+        ))
+        
 # Other useful tools
 install.packages(c(
         "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "repmis", "stargazer",
-        "rworldmap", "rfacebook", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR"
+        "rworldmap", "rfacebook", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR",
+        "WDI", "analogsea", "Rmonkey"
         ))
 
 # Packages on Github
 library(devtools)
 install_git("https://github.com/sinhrks/ggfortify")
+install_git("https://github.com/randel/MixRF")
 install_git("https://github.com/twitter/BreakoutDetection")
 install_git("https://github.com/twitter/AnomalyDetection")
 install_git("https://github.com/google/CausalImpact")
 install_git("https://github.com/rasmusab/bayesian_first_aid")
 install_git("https://github.com/zmjones/edarf/")
 install_git("https://github.com/leeper/margins")
-install_git("https://github.com/rmcelreath/rethinking")
 install_git("https://github.com/trinker/wakefield")

@@ -4,7 +4,7 @@
 install.packages(c(
         "Zelig", "mgcv", "gam", "MCMCpack", "arm", "lme4", "car", "MASS", "AER", "quantreg", "robust", 
         "heavy", "rms", "sandwich", "Synth", "rjags", "MCMCglmm", "survival", "sem", "pscl", "pcse",
-        "rstan", "brms", "ivmodel"
+        "rstan", "brms", "ivmodel", "rdrobust"
         ))
 
 # Hadleyverse

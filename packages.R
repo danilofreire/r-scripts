@@ -33,8 +33,8 @@ install.packages(c(
 # Other useful tools
 install.packages(c(
         "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "repmis", "stargazer",
-        "rworldmap", "rfacebook", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR",
-        "WDI", "analogsea", "Rmonkey"
+        "rworldmap", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR", "WDI", "Rmonkey",
+        "SocialMediaLab", "analogsea", "Rmonkey"
         ))
 
 # Packages on Github

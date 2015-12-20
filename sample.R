@@ -13,7 +13,6 @@ sample100 <- sample(outcomes,            # data set
 table(sample100)
 
 # Using sample and a loop:
-
 outcomes1 <- 0:10         # vector from 0 to 10
 sample500 <- rep(NA, 500) # creating an empty vector
 
@@ -25,3 +24,9 @@ for(i in seq(along=sample500)){
 summary(sample500)
 plot(density(sample500))           # density plot of the sample means
 quantile(sample500, c(.025, .975)) # 95% interval of the distributions of the means
+
+# Using the caTools package:
+require(caTools)
+sample = sample.split(data, SplitRatio = .75)
+train = subset(data, sample == TRUE)
+test = subset(data, sample == FALSE) 

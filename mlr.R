@@ -46,7 +46,8 @@ plotFilterValues(fv.class) + ggtitle("Variable Importance")
 
 # partial prediction
 fit.class <- train(lrnr.class, task.class)
-pd.class <- generatePartialPredictionData(fit.class, task, c("income", "age", "education", "female"))
+pd.class <- generatePartialPredictionData(fit.class, task.class,
+                                          c("income", "age", "education", "female"))
 plotPartialPrediction(pd.class) + ggtitle("Partial Probabilities")
 
 # interactions

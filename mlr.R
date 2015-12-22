@@ -3,9 +3,11 @@
 #################################################
 
 ### load packages
-require(mlr)     # models
-require(caTools) # sampling
-require(Zelig)   # data
+require(mlr)         # models
+require(parallelMap) # parallelisation
+require(Zelig)       # data
+
+parallelStartSocket(2) # parallelisation: 2 cores
 
 ## first, a binary classification problem
 
@@ -100,3 +102,5 @@ pd3.reg <- generatePartialPredictionData(fit.reg, task.reg,
                                          individual = TRUE,
                                          derivative = TRUE)
 plotPartialPrediction(pd3.reg) + ggtitle("Partial Probabilities")
+
+parallelStop() # stop parallelisation

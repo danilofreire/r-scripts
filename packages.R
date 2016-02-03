@@ -16,25 +16,25 @@ install.packages(c(
 # Machine learning tools
 install.packages(c(
         "e1071", "caret", "rpart", "rpart.plot", "rattle", "randomForest", "randomForestSRC", "party", 
-        "C50", "quantregForest", "ROCR", "kknn","KRLS" 
+        "C50", "quantregForest", "ROCR", "kknn","KRLS", "mlr"
         ))
         
 # Data manipulation and graphs
 install.packages(c(
         "ggthemes", "ggmcmc", "effects", "ngramr", "data.table", "gdata", "wesanderson", "DiagrammeR",
-        "cowplot"
+        "cowplot", "gganimate", "gtrendsR", "interplot"
         ))
 
 # Analysis of Experiments        
 install.packages(c(
-        "experiment", "list", "endorse", "rr", "mediation", "FindIt"
+        "experiment", "list", "endorse", "rr", "mediation", "FindIt", "randomizr"
         ))
         
 # Other useful tools
 install.packages(c(
         "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "repmis", "stargazer",
         "rworldmap", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR", "WDI", "Rmonkey",
-        "SocialMediaLab", "analogsea", "Rmonkey"
+        "SocialMediaLab", "analogsea", "wakefield", "datasynthR"
         ))
 
 # Packages on Github

@@ -22,7 +22,7 @@ install.packages(c(
 # Data manipulation and graphs
 install.packages(c(
         "ggthemes", "ggmcmc", "effects", "ngramr", "data.table", "gdata", "wesanderson", "DiagrammeR",
-        "cowplot", "gganimate", "gtrendsR", "interplot"
+        "cowplot", "gganimate", "gtrendsR", "interplot", "plotly"
         ))
 
 # Analysis of Experiments        

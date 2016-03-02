@@ -34,7 +34,7 @@ install.packages(c(
 install.packages(c(
         "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "repmis", "stargazer",
         "rworldmap", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR", "WDI", "Rmonkey",
-        "SocialMediaLab", "analogsea", "wakefield", "datasynthR"
+        "SocialMediaLab", "analogsea", "wakefield", "datasynthR", "pdftools"
         ))
 
 # Packages on Github

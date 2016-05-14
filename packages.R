@@ -32,9 +32,9 @@ install.packages(c(
         
 # Other useful tools
 install.packages(c(
-        "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "repmis", "stargazer",
+        "WhatIf", "Amelia", "Matching", "MatchingFrontier", "MatchIt", "cem", "rbounds", "stargazer",
         "rworldmap", "coda", "lmtest", "parallel", "ebal", "broom", "pander", "MTurkR", "WDI", "Rmonkey",
-        "SocialMediaLab", "analogsea", "wakefield", "datasynthR", "pdftools"
+        "SocialMediaLab", "analogsea", "wakefield", "datasynthR", "pdftools", "repmis"
         ))
 
 # Packages on Github

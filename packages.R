@@ -2,15 +2,14 @@
 
 # Models
 install.packages(c(
-        "Zelig", "mgcv", "gam", "MCMCpack", "arm", "lme4", "car", "MASS", "AER", "quantreg", "robust", 
-        "heavy", "rms", "sandwich", "Synth", "rjags", "MCMCglmm", "survival", "sem", "pscl", "pcse",
+        "mgcv", "gam", "MCMCpack", "arm", "lme4", "car", "MASS", "AER", "quantreg", "robust", 
+        "heavy", "rms", "sandwich", "Synth", "MCMCglmm", "survival", "sem", "pscl", "pcse",
         "rstan", "rstanarm", "brms", "ivmodel", "rdrobust"
         ))
 
 # Hadleyverse
 install.packages(c(
-        "ggplot2", "ggvis", "dplyr", "tidyr", "lubridate", "reshape2", "stringr", "readr", "readxl",
-        "haven", "rvest", "devtools", "purrr"
+        "tidyverse", "devtools", "purrr"
         ))
         
 # Machine learning tools
@@ -22,7 +21,7 @@ install.packages(c(
 # Data manipulation and graphs
 install.packages(c(
         "ggthemes", "ggmcmc", "effects", "ngramr", "data.table", "gdata", "wesanderson", "DiagrammeR",
-        "cowplot", "gganimate", "gtrendsR", "interplot", "plotly"
+        "cowplot", "gganimate", "gtrendsR", "interplot", "plotly", "simputation"
         ))
 
 # Analysis of Experiments        

@@ -9,7 +9,7 @@ install.packages(c(
 
 # Hadleyverse
 install.packages(c(
-        "tidyverse", "devtools", "purrr"
+        "tidyverse", "devtools", "modelr"
         ))
         
 # Machine learning tools

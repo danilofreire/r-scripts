@@ -4,7 +4,7 @@
 install.packages(c(
         "mgcv", "gam", "MCMCpack", "arm", "lme4", "car", "MASS", "AER", "quantreg", "robust", 
         "heavy", "rms", "sandwich", "Synth", "MCMCglmm", "survival", "sem", "pscl", "pcse",
-        "rstan", "rstanarm", "brms", "ivmodel", "rdrobust"
+        "rstan", "rstanarm", "brms", "ivmodel", "rdrobust", "clubSandwich", "clusterSEs"
         ))
 
 # Hadleyverse
@@ -26,7 +26,7 @@ install.packages(c(
 
 # Analysis of Experiments        
 install.packages(c(
-        "experiment", "list", "endorse", "rr", "mediation", "FindIt", "randomizr"
+        "experiment", "list", "endorse", "rr", "mediation", "FindIt", "randomizr", "wfe"
         ))
         
 # Other useful tools

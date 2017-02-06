@@ -6,7 +6,7 @@
 # and we assume that Japan received the treatment in 1980
 library(Zelig)
 data(macro)
-macro.sub <- subset(macro, country == c("Japan", "Belgium"))
+macro.sub <- subset(macro, country  %in% c("Japan", "Belgium", "France"))
 
 # Create dummies for treatment
 macro.sub$year1980 <- as.numeric(macro.sub$year >= 1980)
@@ -26,6 +26,10 @@ macro.sub$japan.year1980 <- macro.sub$year1980*macro.sub$japan # interaction
 reg1 <- glm(unem ~ japan + year1980 + japan.year1980, data = macro.sub)
 summary(reg1)
 
+# Clustered-robust standard errors
+library(clubSandwich)
+coef_test(reg1, vcov = "CR2", cluster = macro.sub$country, test = "Satterthwaite")
+
 # Complete data set, matching before differences-in-differences
 library(MatchIt)
 library(cem)
@@ -42,3 +46,5 @@ m.data <- match.data(match1)
 # Regression
 reg2 <- lm(unem ~ japan + year1980 + japan.year1980, data = m.data)
 summary(reg2)
+
+# Or you can just use the `diff` command in Stata :-)

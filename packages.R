@@ -4,7 +4,7 @@
 install.packages(c(
         "mgcv", "gam", "MCMCpack", "arm", "lme4", "car", "MASS", "AER", "quantreg", "robust", 
         "heavy", "rms", "sandwich", "Synth", "MCMCglmm", "survival", "sem", "pscl", "pcse",
-        "rstan", "rstanarm", "brms", "ivmodel", "rdrobust", "clubSandwich", "clusterSEs"
+        "rstan", "rstanarm", "brms", "ivmodel", "rdrobust", "clubSandwich", "clusterSEs", 'prophet'
         ))
 
 # Hadleyverse

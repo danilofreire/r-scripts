@@ -15,13 +15,13 @@ install.packages(c(
 # Machine learning tools
 install.packages(c(
         "e1071", "caret", "rpart", "rpart.plot", "rattle", "randomForest", "randomForestSRC", "party", 
-        "C50", "quantregForest", "ROCR", "kknn","KRLS", "mlr"
+        "C50", "quantregForest", "ROCR", "kknn","KRLS", "mlr", "h2o"
         ))
         
 # Data manipulation and graphs
 install.packages(c(
         "ggthemes", "ggmcmc", "effects", "ngramr", "data.table", "gdata", "wesanderson", "DiagrammeR",
-        "cowplot", "gganimate", "gtrendsR", "interplot", "plotly", "simputation"
+        "cowplot", "gganimate", "gtrendsR", "interplot", "plotly", "simputation", "dplyr", "vtreat"
         ))
 
 # Analysis of Experiments        
